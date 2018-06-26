@@ -1,0 +1,6 @@
+# microservice specific routes
+
+POST        /registration           @uk.gov.hmrc.controllers.RegistrationController.register
+POST        /subscription           @uk.gov.hmrc.controllers.SubscriptionController.subscribe
+
+GET         /service/:serviceName   @uk.gov.hmrc.controllers.RegistrationController.fetchService(serviceName)

@@ -60,7 +60,7 @@ Payload:
 ```
 response:
 ```
-204 NO CONTENT
+204 No Content
 ```
 
 ---

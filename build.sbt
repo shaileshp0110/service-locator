@@ -31,7 +31,7 @@ lazy val test = Seq(
   "com.github.tomakehurst" % "wiremock" % "2.11.0" % scope
 )
 
-lazy val plugins: Seq[Plugins] = Seq(PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtDistributablesPlugin)
+lazy val plugins: Seq[Plugins] = Seq(PlayScala, SbtAutoBuildPlugin, SbtGitVersioning, SbtDistributablesPlugin, SbtArtifactory)
 lazy val playSettings: Seq[Setting[_]] = Seq.empty
 
 lazy val microservice = (project in file("."))
@@ -42,6 +42,7 @@ lazy val microservice = (project in file("."))
   .settings(defaultSettings(): _*)
   .settings(
     name := appName,
+    majorVersion := 0,
     scalaVersion := "2.11.11",
     targetJvm := "jvm-1.8",
     libraryDependencies ++= appDependencies,

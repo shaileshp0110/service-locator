@@ -23,5 +23,5 @@ import uk.gov.hmrc.play.config.ServicesConfig
 
 @Singleton
 class AppContext @Inject()(configuration: Configuration) extends ServicesConfig {
-  lazy val subscriptionDelayInSeconds = configuration.getInt(s"$env.subscriptionDelayInSeconds").getOrElse(10)
+  lazy val subscriptionDelayInSeconds = configuration.getInt("subscriptionDelayInSeconds").getOrElse(10)
 }

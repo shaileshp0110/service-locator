@@ -49,7 +49,7 @@ object Env {
   }
 
   def after() = {
-    if (wireMockServer.isRunning) WireMock.reset()
+    if (wireMockServer.isRunning) wireMockServer.resetAll()
   }
 
 }
